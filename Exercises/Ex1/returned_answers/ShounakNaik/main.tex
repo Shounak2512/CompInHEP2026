@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{tikz-feynman}
+\usepackage{titling}
+
+%Bibliography
+\usepackage[backend=biber,style=phys,sorting=nyt]{biblatex}
+\addbibresource{refs.bib}
+\appto{\bibfont}{\small}
+
+\setlength{\droptitle}{-4cm} 
+
+\title{PAP331 - Computational Methods in High Energy Physics}
+\author{Shounak Naik}
+\date{Exercise 1}
+
+%borrowed feynmann layout from previous project
+\begin{document}
+\maketitle
+\vspace{3cm}
+\textbf{Solution to question 2:}
+\vspace{0.7cm}
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \begin{tikzpicture}[scale=1.5]
+            \begin{feynman}
+                \vertex at (-2.7,1.5) (A);
+                \vertex at (-2.7,-1.5) (B);
+                \vertex at (-0.2,1) (C);
+                \vertex at (-1.2,-1) (D);
+                \vertex at (1,1.5) (E);
+                \vertex at (1,-1.5) (F);
+                \diagram*{
+                    (A) -- [fermion, edge label={\(e^+\)}] (C);
+                    (B) -- [fermion, edge label'={\(e^-\)}] (D);
+                    (C) -- [boson, edge label={\(\gamma\)}] (E);
+                    (D) -- [boson, edge label={\(\gamma\)}] (F);
+                    (D) -- [fermion, edge label'={\( \)}] (C);
+                };
+            \end{feynman}
+        \end{tikzpicture} 
+    \end{minipage}
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \begin{tikzpicture}[scale=1.5]
+            \begin{feynman}
+                \vertex at (-2.7,1.5) (A);
+                \vertex at (-2.7,-1.5) (B);
+                \vertex at (-0.7,1) (C);
+                \vertex at (-0.2,-1) (D);
+                \vertex at (1,1.5) (E);
+                \vertex at (1,-1.5) (F);
+                \diagram*{
+                    (A) -- [fermion, edge label={\(e^+\)}] (C);
+                    (B) -- [fermion, edge label'={\(e^-\)}] (D);
+                    (C) -- [boson, edge label={\(\gamma\)}] (E);
+                    (D) -- [boson, edge label={\(\gamma\)}] (F);
+                    (D) -- [fermion, edge label'={\( \)}] (C);
+                };
+            \end{feynman}
+        \end{tikzpicture} 
+    \end{minipage}
+    \caption{Feynman diagrams for $e^+ e^-$ annihilation \cite{martin}}
+    \label{dig:e+e-}
+\end{figure}
+
+% \newpage
+\printbibliography[title={References}]
+
+\end{document}
