@@ -1,0 +1,14 @@
+
+      SUBROUTINE TEST
+
+      INTEGER I
+      REAL R
+      DOUBLE PRECISION D
+      COMMON/COMX/I,R(3,3),D
+      CHARACTER*80 CHTEXT(10)
+      COMMON/COMC/CHTEXT
+
+      print *,CHTEXT
+
+      RETURN
+      END
