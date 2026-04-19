@@ -1,0 +1,4 @@
+In the GEANT4 example B4a, the simulated detector is a sampling calorimeter. It consists of a rectangular box made of many identical layers stacked along the beam direction. 
+Each layer contains an absorber plate of lead followed by a sensitive gap that houses liquid argon, where energy deposition is recorded. A 10 GeV incident particle, either e-, 
+proton or alpha particle is simulated traversing the calorimeter, producing showers through successive interactions with matter, we study the energy deposition of different 
+particles and how changing the absorber material affects the simulation. (I have also used the run1 macro to produce a small root file for each simulation)
